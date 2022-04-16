@@ -1,0 +1,305 @@
+<div>
+  <div class="container contnrWidth">
+      <div class="row plunagGold__pd padBottom">
+          <div class="col-sm-6 col-md-6 floatLeft">
+              <div class="homeHero">
+                  <div class="homeHero__swti txt__center">
+                      <h2 class="homeHero__txt">
+                          <%= dictionary.allinOneInvestmentApp %>
+                      </h2>
+                  </div>
+                  <% if ((queryParams && queryParams.utm_source=='GoogleSEM' ) || (queryParams &&
+                      queryParams.utm_source=='GoogleYT' )) { %>
+                      <p class="DeskVw font20">
+                          <%= dictionary.buyGoldDescHeadingWithoutCrypto %>
+                      </p>
+                      <% } else { %>
+                          <p class="DeskVw font20">
+                              <%= dictionary.buyGoldDescriptionHeading %>
+                          </p>
+                          <% } %>
+                              <div class="appstoreIcon DeskVw width-100">
+                                  <%- include('../../partials/playstore-download-link'); %>
+                              </div>
+              </div>
+          </div>
+          <div class="col-sm-6 col-md-6 floatRight">
+              <div class="rightHome__hero">
+                  <% if ((queryParams && queryParams.utm_source=='GoogleSEM' ) || (queryParams &&
+                      queryParams.utm_source=='GoogleYT' )) { %>
+                      <img class="img-responsive"
+                          src="https://pluang-production-uploads.s3.ap-southeast-1.amazonaws.com/website-items/pluang-website/home-hero-SEM.png"
+                          alt="" loading="lazy" />
+                      <% } else { %>
+                          <video autoplay="" controlslist="nodownload nofullscreen noremoteplayback" loop="" muted=""
+                              playsinline="" preload="auto">
+                              <source
+                                  src="https://pluang-production-uploads.s3.ap-southeast-1.amazonaws.com/website-items/pluang-website-web/screen-animatin.mp4"
+                                  type="video/mp4" loading="lazy">
+                          </video>
+                          <div class="rightHome__animatFrame">
+                              <div class="rightHome__animatFramebubble" data-module="lottie-animate"
+                                  data-path="https://pluang-production-uploads.s3-ap-southeast-1.amazonaws.com/website-items/pluang-website-web/home-animation.json">
+                              </div>
+                          </div>
+                          <% } %>
+              </div>
+              <div class="mobView width-100 mobView reg__cntnt ">
+                  <div class="row appstoreIcon mobView__center">
+                      <%- include('../../partials/playstore-download-link'); %>
+                  </div>
+                  <div class="xs-12 appstoreIcon mobView">
+                      <div class="txt__center">
+                          <% if (queryParams && (queryParams.utm_source=='GoogleSEM' ||
+                              queryParams.utm_source=='GoogleYT' )) { %>
+                              <p>
+                                  <%- dictionary.buyGoldInThreeTapsWithoutCrypto %>
+                              </p>
+                              <% } else { %>
+                                  <p>
+                                      <%- dictionary.buyGoldInThreeTaps%>
+                                  </p>
+                                  <% } %>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <%- include('./home-page-promotionlogo'); %>
+          <div class="benefits width-100">
+              <div class="benefits__home width-100">
+                  <div class="benefits__bx">
+                      <img src="https://pluang-production-uploads.s3-ap-southeast-1.amazonaws.com/website-items/pluang-website-web/aio.svg"
+                          alt="all-in-one" loading="lazy">
+                      <div class="benefits__bxCont">
+                          <h3>
+                              <%- dictionary.allinOnePlatform%>
+                          </h3>
+                          <p>
+                              <%- dictionary.allinOnePlatformContent%>
+                          </p>
+                      </div>
+                  </div>
+                  <div class="benefits__bx">
+                      <img src="https://pluang-production-uploads.s3-ap-southeast-1.amazonaws.com/website-items/pluang-website-web/secure.svg"
+                          alt="secure" loading="lazy">
+                      <div class="benefits__bxCont">
+                          <h3>
+                              <%- dictionary.SecuredTitle%>
+                          </h3>
+                          <p>
+                              <%- dictionary.SecuredContent%>
+                          </p>
+                      </div>
+                  </div>
+                  <div class="benefits__bx">
+                      <img src="https://pluang-production-uploads.s3-ap-southeast-1.amazonaws.com/website-items/pluang-website-web/earn-more.svg"
+                          alt="earn-more" loading="lazy">
+                      <div class="benefits__bxCont">
+                          <h3>
+                              <%- dictionary.earnMoreCost%>
+                          </h3>
+                          <p>
+                              <%- dictionary.earnMoreCostContent%>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="width-100 sliderTab sliderTab__home">
+              <div class="splide" data-module="testimonial-slide-module" data-items-desktop="1" data-items-mobile="1"
+                  data-splide-type="fade" data-speed="1000" data-interval="5000" data-pause-on-hover="1"
+                  data-pause-on-focus="1" data-paginate="5" data-clickable-tabs="true"
+                  <% if ((queryParams &&
+                  (queryParams.utm_source==='GoogleSEM' || queryParams.utm_source==='GoogleYT' ))) { %>
+                  data-tabs='["<%- dictionary.gold%>","<%- dictionary.usStockCfdTab%>", "<%- dictionary.stockIndexTab%>", "<%- dictionary.mutualFundTab%>"]' <% } else { %> data-tabs=
+                      '["<%- dictionary.gold%>","<%- dictionary.usStockCfdTab%>", "<%- dictionary.stockIndexTab%>", "<%- dictionary.crypoTab%>", "<%- dictionary.mutualFundTab%>"]'<% } %>>
+                  <div class="splide__track">
+                      <h2 class="sliderTab__title DeskVw">
+                          <%- dictionary.whatInvestment%>
+                      </h2>
+                      <ul class="splide__list width-100" style="width: 100% !important;">
+                          <li class="splide__slide">
+                              <div class="col-sm-6 col-md-5 sliderTab__img sliderTab__img--home">
+                                  <div class="mobView width-100 txt__center">
+                                      <span>
+                                          <%- dictionary.gold%>
+                                      </span>
+                                      <h2>
+                                          <%- dictionary.simpleWayGold%>
+                                      </h2>
+                                  </div>
+                                  <span>
+                                      <img src="https://pluang-production-uploads.s3.ap-southeast-1.amazonaws.com/website-items/pluang-website-web/assets_gold_min.png"
+                                          class="gold procuct image" alt="Assets Gold">
+                                  </span>
+                              </div>
+                              <div class="col-sm-6 col-md-7 sliderTab__cont sliderTab__cont--home">
+                                  <div class="card homeTab">
+                                      <div class="coVid__content">
+                                          <section class="simpleWayGold active">
+                                              <div class="width-100 swg">
+                                                  <h2 class="DeskVw">
+                                                      <%- dictionary.simpleWayGold%>
+                                                  </h2>
+                                                  <p>
+                                                      <%- dictionary.simpleWayGoldDescription%>
+                                                  </p>
+                                                  <a href="<%= routes.ASSETS_GOLD %>">
+                                                      <%- dictionary.learnMore%>
+                                                  </a>
+                                              </div>
+                                          </section>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="splide__slide">
+                              <div class="col-sm-6 col-md-5 sliderTab__img sliderTab__img--home">
+                                  <div class="mobView width-100 txt__center">
+                                      <span class="gssBg">
+                                          <%- dictionary.usStockCfdTab%>
+                                      </span>
+                                      <h2>
+                                          <%- dictionary.growPortfolio%>
+                                      </h2>
+                                  </div>
+                                  <span>
+                                      <img src="https://pluang-production-uploads.s3.ap-southeast-1.amazonaws.com/website-items/pluang-website-web/assets_gss_min.png"
+                                          class="gold procuct image" alt="Assets SnP">
+                                  </span>
+                              </div>
+                              <div class="col-sm-6 col-md-7 sliderTab__cont sliderTab__cont--home">
+                                  <div class="card homeTab">
+                                      <div class="coVid__content">
+                                          <section class="simpleWayGold simpleWayGold__snp active">
+                                              <div class="width-100 swg">
+                                                  <h2 class="DeskVw">
+                                                      <%- dictionary.growPortfolio%>
+                                                  </h2>
+                                                  <p>
+                                                      <%- dictionary.growPortfolioDescription%>
+                                                  </p>
+                                                  <a href="<%= routes.US_EQUITIES %>">
+                                                      <%- dictionary.learnMore%>
+                                                  </a>
+                                              </div>
+                                          </section>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="splide__slide">
+                              <div class="col-sm-6 col-md-5 sliderTab__img sliderTab__img--home">
+                                  <div class="mobView width-100 txt__center">
+                                      <span class="stockBg">
+                                          <%- dictionary.stockIndexTab%>
+                                      </span>
+                                      <h2>
+                                          <%- dictionary.accessMarket%>
+                                      </h2>
+                                  </div>
+                                  <span>
+                                      <img src="https://pluang-production-uploads.s3.ap-southeast-1.amazonaws.com/website-items/pluang-website-web/assets_usindex_min.png"
+                                          class="gold procuct image" alt="Assets US Stock">
+                                  </span>
+                              </div>
+                              <div class="col-sm-6 col-md-7 sliderTab__cont sliderTab__cont--home">
+                                  <div class="card homeTab">
+                                      <div class="coVid__content">
+                                          <section class="simpleWayGold simpleWayGold__snp active">
+                                              <div class="width-100 swg">
+                                                  <h2 class="DeskVw">
+                                                      <%- dictionary.accessMarket%>
+                                                  </h2>
+                                                  <p>
+                                                      <%- dictionary.accessBestPerforming%>
+                                                  </p>
+                                                  <a href="<%= routes.STOCK_INDEX %>">
+                                                      <%- dictionary.learnMore%>
+                                                  </a>
+                                              </div>
+                                          </section>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+                          <% if (! (queryParams && (queryParams.utm_source=='GoogleSEM' ||
+                              queryParams.utm_source=='GoogleYT' )) ) { %>
+                              <li class="splide__slide">
+                                  <div class="col-sm-6 col-md-5 sliderTab__img sliderTab__img--home">
+                                      <div class="mobView width-100 txt__center">
+                                          <span class="cryptoBg">
+                                              <%- dictionary.crypoTab%>
+                                          </span>
+                                          <h2>
+                                              <%- dictionary.Supercharge%>
+                                          </h2>
+                                      </div>
+                                      <span>
+                                          <img src="https://pluang-production-uploads.s3.ap-southeast-1.amazonaws.com/website-items/pluang-website-web/assets_crypto_min.png"
+                                              class="gold procuct image" alt="Assets Crypto">
+                                      </span>
+                                  </div>
+                                  <div class="col-sm-6 col-md-7 sliderTab__cont sliderTab__cont--home">
+                                      <div class="card homeTab">
+                                          <div class="coVid__content">
+                                              <section class="simpleWayGold simpleWayGold__crypto active">
+                                                  <div class="width-100 swg">
+                                                      <h2 class="DeskVw">
+                                                          <%- dictionary.Supercharge%>
+                                                      </h2>
+                                                      <p>
+                                                          <%- dictionary.SuperchargeDescription%>
+                                                      </p>
+                                                      <a href="<%= routes.ASSET_CRYPTO_CURRENCY %>">
+                                                          <%- dictionary.learnMore%>
+                                                      </a>
+                                                  </div>
+                                              </section>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                          <% } %>
+                          <li class="splide__slide">
+                              <div class="col-sm-6 col-md-5 sliderTab__img sliderTab__img--home">
+                                  <div class="mobView width-100 txt__center">
+                                      <span class="mutualFundBg">
+                                          <%- dictionary.mutualFundTab%>
+                                      </span>
+                                      <h2>
+                                          <%- dictionary.mutualFundForyou%>
+                                      </h2>
+                                  </div>
+                                  <span>
+                                      <img src="https://pluang-production-uploads.s3.ap-southeast-1.amazonaws.com/website-items/pluang-website-web/assets_mutualfund_min.png"
+                                          class="gold procuct image" alt="Assets SnP">
+                                  </span>
+                              </div>
+                              <div class="col-sm-6 col-md-7 sliderTab__cont sliderTab__cont--home">
+                                  <div class="card homeTab">
+                                      <div class="coVid__content">
+                                          <section class="simpleWayGold simpleWayGold__snp active">
+                                              <div class="width-100 swg">
+                                                  <h2 class="DeskVw">
+                                                      <%- dictionary.mutualFundForyou%>
+                                                  </h2>
+                                                  <p>
+                                                      <%- dictionary.mutualFundForyouDescription%>
+                                                  </p>
+                                                  <a href="<%= routes.ASSET_MUTUAL_FUND %>">
+                                                      <%- dictionary.learnMore%>
+                                                  </a>
+                                              </div>
+                                          </section>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+  </div>
+</div>
